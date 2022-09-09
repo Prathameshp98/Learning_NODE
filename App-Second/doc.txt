@@ -1,0 +1,7 @@
+"start": "node app.js"           -------------------> npm start
+"start-server": "node app.js"    -------------------> npm run start-server
+
+
+npm install <package_name> --save saves    the name and version of the package being installed in the dependency object.
+npm install <package_name> --save-dev    saves the name and version of the package being installed in the dev-dependency object. (These are the packages that you need while developing the project but not when deploying the project. These packages are not built when the project is deployed.)
+npm install <package_name> -g    Specifically the -g flag ensures that the package gets added as a global package which you now can use anywhere on your machine, directly from inside the terminal or command prompt.
