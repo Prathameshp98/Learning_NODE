@@ -4,6 +4,8 @@ const path = require('path')
 
 const app = express();
 
+const errorController = require('./controllers/error')
+
 app.set('view engine','ejs')
 app.set('views','views')
 
@@ -17,9 +19,7 @@ app.use(express.static(path.join(__dirname, 'public')))
 app.use('/admin', adminRoutes);
 app.use(shopRoutes);
 
-app.use((req, res, next) => {
-  res.status(404).render('404',{pageTitle: 'Page not Found'})
-})
+app.use(errorController.get404)
 
 app.listen(3000, () => {
     console.log("App started on port 3000")
