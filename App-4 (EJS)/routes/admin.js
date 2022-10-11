@@ -12,7 +12,10 @@ router.get('/add-product', (req, res, next) => {
     // res.sendFile(path.join(rootDirectory, 'views', 'add-product.html'))
     res.render('add-product' ,{
       path: '/admin/add-product', 
-      pageTitle: 'Add Product'
+      pageTitle: 'Add Product',
+      isAddproductActive: true,
+      productCSS: true,
+      formCSS: true
     })
     
   });
