@@ -7,7 +7,6 @@ const swaggerDocument = require('./swagger.json');
 
 const customCss = fs.readFileSync((process.cwd()+"/swagger.css"), 'utf8');
 
-
 const app = express();
 
 const errorController = require('./controllers/error')
