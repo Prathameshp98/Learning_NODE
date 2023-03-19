@@ -11,7 +11,7 @@ const customCss = fs.readFileSync((process.cwd()+"/swagger.css"), 'utf8');
 const app = express();
 
 const errorController = require('./controllers/error')
-const db = require('../App-8 (sql)/util/database')
+const sequelize = require('../App-8 (sql)/util/database')
 
 app.set('view engine','ejs')
 app.set('views','views')
